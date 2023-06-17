@@ -9,4 +9,4 @@ int main() {
   printf("\n G = %.2f", G);
 
   return 0;
-}
+}o
