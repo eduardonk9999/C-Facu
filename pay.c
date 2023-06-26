@@ -16,9 +16,9 @@ void main(){
     3751.05,
     4664.68
   };
+  int salario_bruto = 2300;
 
   int desconto_inss = 0.0;
-  int salario_bruto = 2300;
 
   // Criar um for para calcular o desconto do INSS, salarioBruto * aliquota;
   // essa aliquota vai ser dentro do for, vai ser a aliquota do indice do for
@@ -37,6 +37,16 @@ void main(){
   //base_calculo_ir = salario_bruto - desconto_inss
   // desconto_ir = 0.0
   // Validacao dentro do for, base_calculo_ir <= limite: do indice do for
+
+  int desconto_ir = 0.0;
+  int base_calculo_ir = salario_bruto - desconto_inss;
+  
+  for(int aliquota = 0; aliquota < 4; aliquota++) {
+    if(base_calculo_ir <= tabela_irrf[aliquota]){
+      desconto_ir = base_calculo_ir * aliquota;
+      break;
+    }
+  }
 
 
   // Cálcular o salário líquido
