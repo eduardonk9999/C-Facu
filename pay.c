@@ -51,5 +51,7 @@ void main(){
 
   // Cálcular o salário líquido
   // salario_liquido = salario_bruto - desconto_inss - desconto_ir
+
+  int salario_liquido = salario_bruto - desconto_inss - desconto_ir;
   
 }
